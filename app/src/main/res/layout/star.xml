@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/profilebg"
+    android:padding="12dp">
+
+    <!-- Label: Star Name -->
+
+
+    <!-- Input: Star Name -->
+    <Button
+        android:id="@+id/delButton"
+        android:soundEffectsEnabled="false"
+        android:layout_width="wrap_content"
+        android:backgroundTint="@null"
+        app:backgroundTint="@null"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="12dp"
+        android:background="#F00"
+        android:textSize="20sp"
+        android:text="delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/starNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/black"
+        android:text="star's name"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/delButton" />
+
+    <EditText
+        android:id="@+id/starNameInput"
+        android:soundEffectsEnabled="false"
+        android:textColor="@color/black"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        app:layout_constraintStart_toEndOf="@id/starNameLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/starNameLabel" />
+
+    <!-- Label: Star Description -->
+    <TextView
+        android:id="@+id/starDescLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="star's description"
+        android:textColor="@color/black"
+
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/starNameInput"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Input: Description -->
+    <EditText
+        android:id="@+id/starDescInput"
+        android:soundEffectsEnabled="false"
+        android:textColor="@color/black"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        app:layout_constraintStart_toEndOf="@id/starDescLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/starDescLabel" />
+
+    <!-- Hidden slider for "position" (0.1 - 0.9) -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+
+        android:textSize="16sp"
+        android:text="star's position"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/starDescInput" />
+
+    <SeekBar
+        android:id="@+id/positionSlider"
+        android:backgroundTint="@null"
+        app:backgroundTint="@null"
+        android:soundEffectsEnabled="false"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:max="80"
+        android:progress="40"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/starDescInput" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

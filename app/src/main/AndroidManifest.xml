@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/logostar"
+        android:label="Hobby Stars"
+        android:attributionTags="default"
+        android:roundIcon="@drawable/logostar"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.HackHeroes"
+        tools:targetApi="31">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".StarCollectionActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".SCCreatorActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="true">
+        </activity>
+        <service
+            android:name=".BackgroundMusicService"
+            android:exported="false" />
+
+
+    </application>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+</manifest>
